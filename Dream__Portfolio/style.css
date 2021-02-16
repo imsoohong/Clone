@@ -1,0 +1,321 @@
+/* Global */
+
+:root {
+  /* Color */
+  --color-white: #ffffff;
+  --color-light-white: #eeeeee;
+  --color-dark-white: #bdbdbd;
+  --color-pink: #fe918d;
+  --color-dark-pink: #ff6863;
+  --color-dark-grey: #4d4d4d;
+  --color-grey: #616161;
+  --color-light-grey: #7c7979;
+  --color-blue: #73aace;
+  --color-yellow: #fff7d1;
+  --color-orange: #feb546;
+  --color-black: #000000;
+
+  /* Font size */
+  --font-large: 48px;
+  --font-medium: 28px;
+  --font-regular: 18px;
+  --font-small: 16px;
+  --font-micro: 14px;
+
+  /* Font weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+
+
+/* Size */
+--size-border-radius : 4px;
+
+/* Animation */
+--animation__duration: 300ms;
+}
+/* Universal tag */
+* { 
+  box-sizing: border-box;
+}
+
+body { 
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  cursor: default;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+ul{
+  padding-left: 0;
+}
+
+li{
+  list-style: none;
+}
+
+button{
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+/* Typography */
+
+h1 {
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
+  color: var(--color-black);
+  margin: 16px 0px;
+}
+
+h2 {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-black);
+  margin: 8px 0;
+}
+
+h3 {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 8px 0;
+}
+
+p {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 4px 0;
+}
+
+/* Navbar */
+#navbar { 
+  display: flex; /* display를 하면 일렬로 나누어진다 */
+  justify-content: space-between; /* 컨텐츠를 양 끝에 밀기 */
+  align-items: center; /* 수직으로 가운데 정렬하기 */
+  background-color: var(--color-black);
+  color: white;
+  padding: 16px; 
+}
+
+.navbar__menu{
+  display: flex; /* 메뉴들을 일렬로 나누기 */
+}
+
+.navbar__logo { 
+  font-size : var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+}
+
+.navbar__menu__item{
+  padding: 8px 12px;
+  margin: 0px 4px;
+}
+
+.navbar__menu__item.active { 
+  border: 1px solid var(--color-white);
+  border-radius: var(--size-border-radius);
+}
+
+.navbar__menu__item:hover {
+  background-color: var(--color-dark-grey);
+}
+
+/* .navbar__toggle-btn {
+
+} */
+
+/* Home */
+#home { 
+  background:url("imgs/homebackground.png") center/cover no-repeat; /* 배경화면 중앙에 다 덮고 더이상 반복 없기 */
+  text-align: center; /* 텍스트들을 중간으로 정렬하기 */
+  padding: 40px; /* 패딩 40px 주기 */
+}
+
+.home__avatar{
+  width: 250px; 
+  height: 250px;
+  border-radius: 50%; /* 둥글게 만들기 */
+  border: 2px solid var(--color-light-white);
+}
+
+.home__title,
+.home__description{
+  color: var(--color-white);
+}
+
+.home__contact{
+  color: white;
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  border: 2px solid var(--color-white);
+  margin: 24px;
+  padding: 8px 12px;
+  border-radius: var(--size-border-radius);
+}
+
+/* Section common */
+.section { 
+  text-align: center; 
+  padding: 50px;
+  margin: auto;
+}
+
+.section__container{
+  max-width: 1200px; /* 1000~1200이 제일 적당 */
+  margin:auto;
+}
+
+/* About */
+.about__majors{
+  display: flex; /* 아이콘이랑 그 밑에 설명 가로로 정렬 */
+  justify-content: space-between; /* 맨 끝으로 정렬 */
+  margin: 80px 0;
+}
+
+.major__icon{
+  width: 170px;
+  height: 170px;
+  line-height: 170px;
+  font-size: 70px;
+  margin: auto;
+  color: black;
+  border: 1px solid var(--color-black);
+  border-radius: 50%;
+  margin-bottom: 16px; /* 글씨랑 살짝 멀어지게 */
+}
+
+.major__icon i{
+  transition: all var(--animation-duration) ease;
+}
+
+.major__icon:hover i {
+  color: var(--color-pink);
+  transform: rotate(-30deg);
+}
+
+.major__title, .major__description{
+  color: var(--color-dark-grey);
+  font-size: var(--font-small);
+}
+
+.job { 
+  display: flex; 
+  align-items: center; /* 세로를 중간으로 정렬 */
+}
+
+.job__description{
+  margin: 0 16px;
+  text-align: left;
+}
+
+.job__name, .job__period{
+  color: var(--color-light-grey);
+}
+
+.job__name { 
+  font-size: var(--font-small);
+}
+
+.job__period{
+  font-size: var(--font-micro);
+}
+
+/* Skill */
+#skills { 
+  background-color: var(--color-yellow);
+}
+
+.skillset{
+  display: flex;
+  background-color: var(--color-light-grey);
+  color: var(--color-light-white);
+  margin: 20px 0;
+}
+
+.skillset__title{
+  color: var(--color-white);
+}
+
+.skillset__left{
+  flex-basis: 60%;
+  background-color: var(--color-dark-grey);
+  padding: 40px;
+}
+
+.skillset__right{
+  flex-basis: 40%;
+}
+
+.skill{
+  margin-bottom: 32px;
+}
+
+.skill__description{
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill__bar{
+  width:100%;
+  height: 3px;
+  background-color: var(--color-grey);
+}
+
+.skill__value{
+  height: 3px;
+  background-color: orange;
+}
+
+.tools{
+  background-color: grey;
+}
+
+.tools, .etc{
+  padding: 20px;
+}
+
+.work__categories{
+  margin: 40px;
+}
+
+.category__btn{
+  border: 1px solid var(--color-dark-white);
+  border-radius: var(--size-border-radius);
+  font-size: var(--font-regular);
+  padding: 8px 48px;
+}
+
+.category__btn.active,
+.category__btn:hover {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.category__btn.active .category__count,
+.category__btn:hover .category__count{
+  opacity: 1; /*  보이게 하기 */
+  top: 0; /* 밑에 기본값이 -20에서 떨어져서 중간에 오게 하기 */
+} /* active와 마우스를 올린 상태에만 보이기 */
+/* active는 따로 클래스를 지정해줬기 때문에 계속 보인다 */
+
+.category__count { 
+  background-color: var(--color-orange);
+  border-radius: 50%;
+  color: var(--color-white);
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  display: inline-block; /* span이 inline 요소이니 */
+  position: relative;
+  top: -20px;
+  left: 4px;
+  opacity: 0;
+  transition: all var(--animation__duration) ease; 
+}
