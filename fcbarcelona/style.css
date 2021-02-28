@@ -1,0 +1,41 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 0x 140px;
+  background-color: blue;
+  height: 170px;
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+
+.header__left li {
+  margin-left: 60px;
+}
+
+.header__right li {
+  margin-right: 100px;
+  color: white;
+  font-size: 25px;
+}
+
+img {
+  width: 150px;
+}
