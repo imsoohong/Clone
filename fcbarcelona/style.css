@@ -4,12 +4,13 @@
 }
 
 header {
+  z-index: 1;
   position: fixed;
   width: 100%;
   top: 0;
   padding: 0x 140px;
   background-color: blue;
-  height: 170px;
+  height: 100px;
   display: flex;
   align-items: center;
 }
@@ -23,6 +24,7 @@ nav {
 
 nav li:hover {
   cursor: pointer;
+  color: black;
 }
 
 ul {
@@ -40,21 +42,22 @@ ul {
   font-size: 25px;
 }
 
-img {
-  width: 150px;
+.header-logo {
+  width: 100px;
 }
 
 .team__intro {
   height: 100vh;
   background-image: url("https://www.fcbarcelona.com/photo-resources/2019/05/30/38eb1b1d-2a93-491b-9395-ed094edcc3f6/FCB_Wallpaper_India_desktop.jpg?width=1920&height=1080");
   background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: white;
   margin: 0px;
-  margin-bottom: 80px;
+  /* margin-bottom: 80px; */
 }
 
 .team__intro h4 {
@@ -84,4 +87,50 @@ img {
 .team__intro a:hover {
   color: black;
   transform: scale(1.1);
+}
+
+.team__img {
+  height: 80vh;
+  display: flex;
+  width: 100%;
+  /* margin-bottom: 80px; */
+  margin: 0px;
+}
+
+.team__img-content {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: beige;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper h4 {
+  margin-bottom: 30px;
+}
+
+.wrapper h3 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.wrapper a {
+  border: 1px solid black;
+  padding: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+.team-img {
+  width: 50%;
 }
