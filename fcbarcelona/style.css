@@ -261,3 +261,29 @@ nav ul {
   border-right: 1px solid white;
   border-left: 1px solid white;
 }
+
+.arrow-up,
+.arrow-down {
+  position: fixed;
+  bottom: 130px;
+  right: 50px;
+  width: 70px;
+  height: 70px;
+  font-size: 50px;
+  color: white;
+  background-color: black;
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 300ms ease-in;
+}
+
+.arrow-up.visible,
+.arrow-down.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.arrow-down{
+  bottom: 50px;
+}
