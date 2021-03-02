@@ -1,6 +1,27 @@
 * {
   padding: 0px;
   margin: 0px;
+  color: #ccc;
+}
+
+a{
+  text-decoration: none;
+}
+
+h1{
+  font-size: 70px;
+}
+
+h2{ 
+  font-size: 50px;
+}
+
+h3{
+  font-size: 30px;
+}
+
+h4{
+  font-size: 20px;
 }
 
 header {
@@ -9,7 +30,7 @@ header {
   width: 100%;
   top: 0;
   padding: 0x 140px;
-  background-color: blue;
+  background-color: #181733;
   height: 100px;
   display: flex;
   align-items: center;
@@ -24,10 +45,9 @@ nav {
 
 nav li:hover {
   cursor: pointer;
-  color: black;
 }
 
-ul {
+nav ul {
   display: flex;
   list-style: none;
 }
@@ -39,53 +59,52 @@ ul {
 .header__right li {
   margin-right: 100px;
   color: white;
-  font-size: 25px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .header-logo {
-  width: 100px;
+  width: 88%;
 }
 
 .team__intro {
   height: 100vh;
-  background-image: url("https://www.fcbarcelona.com/photo-resources/2019/05/30/38eb1b1d-2a93-491b-9395-ed094edcc3f6/FCB_Wallpaper_India_desktop.jpg?width=1920&height=1080");
+  background-image: url("https://i.pinimg.com/originals/55/8b/ea/558bea81492df27ea8695411df9502c1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
   margin: 0px;
-  /* margin-bottom: 80px; */
 }
 
-.team__intro h4 {
+.team__intro h1 {
   margin: 70px 0px;
-  font-size: 30px;
+  color: white;
 }
 
-.team__intro h3 {
-  font-size: 50px;
+.team__intro h2 {
   width: 35%;
   text-align: center;
   margin-bottom: 70px;
+  color: white;
 }
 
 .team__intro a {
   width: 10%;
-  background-color: blue;
-  border-radius: 15%;
+  background-color: #181733;
+  border-radius: 10px; 
   padding: 20px 0px;
   color: white;
   text-align: center;
   text-decoration: none;
   font-size: 18px;
-  transition: all 300ms ease;
+  transition: all 300ms ease-in;
+  font-weight: bold;
 }
 
 .team__intro a:hover {
-  color: black;
   transform: scale(1.1);
 }
 
@@ -104,7 +123,7 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: beige;
+  background-color: #181733;
 }
 
 .wrapper {
@@ -112,9 +131,10 @@ ul {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: white;
 }
 
-.wrapper h4 {
+.wrapper h2 {
   margin-bottom: 30px;
 }
 
@@ -125,10 +145,10 @@ ul {
 }
 
 .wrapper a {
-  border: 1px solid black;
+  border: 1px solid white;
   padding: 20px;
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .team-img {
@@ -144,7 +164,7 @@ ul {
 }
 
 .player {
-  background: blue;
+  background: #181733;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -163,16 +183,26 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-weight: bold;
+}
+
+.player__content h3 {
+  margin-bottom: 40px;
+}
+
+.player__content a { 
+  font-size: 20px;
+  border: 1px solid white;
+  padding: 20px;
+  text-decoration: none;
 }
 
 .player__name {
   margin-bottom: 70px;
+  font-size: 50px;
 }
 
-.player__content h4 {
-  font-size: 32px;
-  margin-bottom: 40px;
-}
+
 
 .gallery {
   display: grid;
@@ -186,9 +216,9 @@ ul {
 }
 
 .gallery__poster img {
-  max-width: 100%;
+  width: 100%;
   height: 100%;
-  transition: opacity 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .gallery__poster img:hover {
@@ -196,34 +226,38 @@ ul {
 }
 
 .footer {
-  /* margin-top: 100px; */
-  background-color: beige;
+  background-color: #181733;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding: 65px 0px;
+  color: white;
 }
 
 .footer__column {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   /* @extend %miniTitle; */
+  font-size: 20px;
 }
+
 .column__title {
   margin-bottom: 50px;
   opacity: 0.5;
 }
 
-.column__title ul {
+.footer__column ul {
   text-align: center;
 }
 
-.column__title li {
+.footer__column li {
   margin-bottom: 15px;
+  list-style: none;
+  cursor: pointer;
 }
 
-.column__title:nth-child(2) {
-  border-right: 1px solid black;
-  border-left: 1px solid black;
+.footer__column:nth-child(2) {
+  border-right: 1px solid white;
+  border-left: 1px solid white;
 }
